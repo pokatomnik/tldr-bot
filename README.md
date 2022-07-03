@@ -4,5 +4,6 @@ Just specify [`BOT_TOKEN`](https://core.telegram.org/bots/api) environment varia
 
 ```shell
 export BOT_TOKEN=YOUR_BOT_TOKEN
+export DEPLOY_TOKEN=YOUR_DEPLOY_TOKEN
 ```
 ...and run start.sh
