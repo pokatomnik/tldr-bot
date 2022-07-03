@@ -5,7 +5,8 @@ const BOT_TOKEN = Deno.env.get("BOT_TOKEN");
 if (BOT_TOKEN === undefined) {
   throw new Error("No `BOT_TOKEN` environment variable provided");
 }
-const bot = new Bot(BOT_TOKEN); // <-- place your bot token inside this string
+
+export const bot = new Bot(BOT_TOKEN); // <-- place your bot token inside this string
 
 bot.command("start", (ctx) =>
   ctx.reply("Welcome! Type a command to get help with")
@@ -27,5 +28,3 @@ bot.on("message:text", async (ctx) => {
     }
   }
 });
-
-bot.start();
