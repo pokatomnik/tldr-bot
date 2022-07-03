@@ -23,7 +23,7 @@ bot.on("message:text", async (ctx) => {
     return ctx.reply(tldr);
   } catch (e) {
     if (e instanceof NotFoundError) {
-      return ctx.reply(`Help for "${command}" not found`);
+      return ctx.reply(`Help for "${command}" not found!`);
     } else {
       return ctx.reply("Sorry, internal error");
     }
