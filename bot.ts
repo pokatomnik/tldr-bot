@@ -13,7 +13,7 @@ bot.command("start", (ctx) =>
 );
 
 bot.on("message:text", async (ctx) => {
-  const command = ctx.message.text;
+  const command = ctx.message.text?.toLocaleLowerCase();
   if (!command) {
     return ctx.reply("Specify command");
   }
