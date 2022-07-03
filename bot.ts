@@ -17,6 +17,7 @@ bot.on("message:text", async (ctx) => {
   if (!command) {
     return ctx.reply("Specify command");
   }
+  console.log(`Requested command: ${command}`);
   try {
     const tldr = await fetchTLDR(command);
     return ctx.reply(tldr);
